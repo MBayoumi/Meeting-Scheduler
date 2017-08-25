@@ -1,0 +1,34 @@
+<div class="formx">
+  <h1>Add New Meeting Form</h1>
+
+
+  <label>title : </label><input lass="rounded" type="text" #title>
+
+<br/>
+
+    <label>date :</label> <input  lass="rounded" type="date" #datetime>
+<br/>
+
+      <label>place:</label> <input  lass="rounded" type="text" #place>
+
+<br/>
+
+        <label>purpose: </label><input  lass="rounded" type="text" #purpose>
+
+<br/>
+
+          <label>priority: </label><input lass="rounded"  type="number" #priority>
+
+<br/>
+
+            <label>state: </label><select #state>
+  <option value="Active">Active</option>
+  <option value="Passed">Passed</option>
+  <option value="postponed">postponed</option>
+
+</select>
+  <br>
+  <br>
+
+<input type="button" class="btn btn-warning" value="Add Meeting" (click)="onbtnaddm(title.value, datetime.value, place.value, purpose.value, priority.value, state.value)">
+</div>

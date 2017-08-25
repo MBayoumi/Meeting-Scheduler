@@ -1,0 +1,18 @@
+
+<div class="formx">
+  <h1>Registeration Form</h1>
+  <ul>
+    <li> Title: {{DB.Mtemp.title}}</li>
+    <li> Date: {{DB.Mtemp.datetime}}</li>
+    <li> Place: {{DB.Mtemp.place}}</li>
+    <li> Purpose: {{DB.Mtemp.purpose}}</li>
+    <li>Periorty: <input type="number" #priority value="{{DB.Mtemp.priority}}" min="1" max="10"></li>
+    <li>State: <select #state>
+      <option value="Active">Active</option>
+      <option value="Passed">Passed</option>
+      <option value="postponed">postponed</option>
+    </select>
+    </li>
+  </ul>
+  <input type="button" class="btn btn-warning" (click)="onbtnup(DB.Mtemp.title,state.value,priority.value)" value="Update">
+</div>

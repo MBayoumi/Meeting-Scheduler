@@ -1,0 +1,12 @@
+
+
+<div class="formx">
+  <h1>Registeration Form</h1>
+  <input style="margin-left: 25px"  type="text" class="rounded"  placeholder="User_Name"  #username>
+  <input type="text"  class="rounded" placeholder="Password" #password>
+  <input style="margin-left: 130px; margin-top: 20px" type="text"  class="rounded" placeholder="Password" #email>
+  <br><br>
+
+  <input style="margin-left: 180px" class="btn btn-warning" type="button" (click)="onbtnsubmit(username.value,password.value,email.value)" value="Register">
+</div>
+

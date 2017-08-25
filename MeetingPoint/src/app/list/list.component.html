@@ -1,0 +1,32 @@
+<div class="formx">
+  <h1>List of all meetings</h1>
+</div>
+
+<input type="text" #place>
+<input type="button" class="btn btn-warning" (click)="onbtnfil(place.value)" value="Filter">
+<input type="button" class="btn btn-save" (click)="onbtnunfil()" value="UNFilter">
+<input type="button" style="float:right" class="btn btn-danger" (click)="onbtnsort()" value="Sort by piriorty">
+
+
+  <table class="table table-condensed">
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>place</th>
+      <th>purpose</th>
+      <th>priority</th>
+      <th>state</th>
+      <th colspan="2">operations</th>
+    </tr>
+    <tr *ngFor="let meet of tuser.Meeting">
+      <td>{{meet.title}}</td>
+      <td>{{meet.datetime.toString()}}</td>
+      <td>{{meet.place}}</td>
+      <td>{{meet.purpose}}</td>
+      <td>{{meet.priority}}</td>
+      <td>{{meet.state}}</td>
+      <td><a routerLink="/show" (click)="onshow(meet.title)">Show</a></td>
+      <td><a routerLink="/list" (click)="ondelete(meet.title)">Delete</a></td>
+    </tr>
+  </table>
+

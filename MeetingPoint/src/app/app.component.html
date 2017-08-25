@@ -1,0 +1,15 @@
+<nav>
+  <div>
+    <p>
+      <a class="btn btn-danger" routerLink="/">Home</a>
+      <a class="btn btn-primary" routerLink="/register">register</a>
+      <a class="btn btn-success" routerLink="/login">login</a>
+      <a *ngIf="DB.logedin" class="btn btn-info" routerLink="/list" >list</a>
+      <a *ngIf="DB.logedin" class="btn btn-warning" routerLink="/add" >add</a>
+    </p>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+
